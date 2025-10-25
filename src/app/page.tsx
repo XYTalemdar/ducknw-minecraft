@@ -27,16 +27,19 @@ export default function Home() {
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/" className="text-amber-400 hover:text-amber-300 transition">Ana Sayfa</Link>
-              <Link href="/forum" className="text-gray-300 hover:text-amber-400 transition">Forum</Link>
-              <Link href="/shop" className="text-gray-300 hover:text-amber-400 transition">Mağaza</Link>
+              <Link href="/magaza" className="text-gray-300 hover:text-amber-400 transition">Mağaza</Link>
+              <Link href="/kredi-satin-al" className="text-gray-300 hover:text-amber-400 transition">Kredi Satın Al</Link>
               <Link href="/tickets" className="text-gray-300 hover:text-amber-400 transition">Destek</Link>
-              <a href="#rules" className="text-gray-300 hover:text-amber-400 transition">Kurallar</a>
-              <a href="#staff" className="text-gray-300 hover:text-amber-400 transition">Kadro</a>
+              <Link href="/wiki" className="text-gray-300 hover:text-amber-400 transition">Wiki</Link>
+              <Link href="/yetkili-basvuru" className="text-gray-300 hover:text-amber-400 transition">Yetkili Başvuru</Link>
+              <Link href="/oy-ver" className="text-gray-300 hover:text-amber-400 transition">Oy Ver</Link>
             </div>
             <div className="flex items-center gap-4">
-              <Button className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-lg shadow-amber-500/50 hidden md:block">
-                Discord
-              </Button>
+              <Link href="/giris-yap" className="hidden md:block">
+                <Button variant="outline" className="border-amber-600 text-amber-400 hover:bg-amber-600/10">
+                  Giriş Yap
+                </Button>
+              </Link>
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -68,24 +71,43 @@ export default function Home() {
               <Link href="/" className="block text-amber-400 hover:text-amber-300 transition" onClick={() => setMobileMenuOpen(false)}>
                 Ana Sayfa
               </Link>
-              <Link href="/forum" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
-                Forum
-              </Link>
-              <Link href="/shop" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/magaza" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
                 Mağaza
+              </Link>
+              <Link href="/kredi-satin-al" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                Kredi Satın Al
               </Link>
               <Link href="/tickets" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
                 Destek
               </Link>
-              <a href="#rules" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/wiki" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                Wiki
+              </Link>
+              <Link href="/yetkili-basvuru" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                Yetkili Başvuru
+              </Link>
+              <Link href="/oy-ver" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                Oy Ver
+              </Link>
+              <Link href="/kredi-gonder" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                Kredi Gönder
+              </Link>
+              <Link href="/sandik" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                Sandık
+              </Link>
+              <Link href="/kurallar" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
                 Kurallar
-              </a>
-              <a href="#staff" className="block text-gray-300 hover:text-amber-400 transition" onClick={() => setMobileMenuOpen(false)}>
-                Kadro
-              </a>
-              <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-lg shadow-amber-500/50">
-                Discord
-              </Button>
+              </Link>
+              <Link href="/giris-yap" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-lg shadow-amber-500/50">
+                  Giriş Yap
+                </Button>
+              </Link>
+              <Link href="/kayit-ol" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="outline" className="w-full border-amber-600 text-amber-400 hover:bg-amber-600/10">
+                  Kayıt Ol
+                </Button>
+              </Link>
             </div>
           )}
         </div>
@@ -565,10 +587,12 @@ export default function Home() {
             <div>
               <h3 className="text-white font-bold mb-4">Hızlı Linkler</h3>
               <ul className="space-y-2">
-                <li><a href="#features" className="text-gray-400 hover:text-amber-400 transition">Özellikler</a></li>
-                <li><a href="#shop" className="text-gray-400 hover:text-amber-400 transition">Mağaza</a></li>
-                <li><a href="#rules" className="text-gray-400 hover:text-amber-400 transition">Kurallar</a></li>
-                <li><a href="#staff" className="text-gray-400 hover:text-amber-400 transition">Kadro</a></li>
+                <li><Link href="/magaza" className="text-gray-400 hover:text-amber-400 transition">Mağaza</Link></li>
+                <li><Link href="/wiki" className="text-gray-400 hover:text-amber-400 transition">Wiki</Link></li>
+                <li><Link href="/kurallar" className="text-gray-400 hover:text-amber-400 transition">Kurallar</Link></li>
+                <li><Link href="/oy-ver" className="text-gray-400 hover:text-amber-400 transition">Oy Ver</Link></li>
+                <li><Link href="/sandik" className="text-gray-400 hover:text-amber-400 transition">Sandıklar</Link></li>
+                <li><Link href="/yetkili-basvuru" className="text-gray-400 hover:text-amber-400 transition">Yetkili Başvuru</Link></li>
               </ul>
             </div>
 
